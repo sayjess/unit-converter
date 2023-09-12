@@ -12,7 +12,7 @@ const lengthEl = document.getElementById("length")
 
 buttonEl.addEventListener("click", function() {
     let userInput = inputEl.value
-    if(typeof userInput === Number){
+    if(NaN(userInput)){
         lengthEl.textContent = `
             ${userInput} meters = ${(userInput * 3.281).toFixed(3)} feet | 
             ${userInput} feet = ${(userInput * 0.3048).toFixed(3)} meters
