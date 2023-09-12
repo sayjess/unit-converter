@@ -11,20 +11,18 @@ const lengthEl = document.getElementById("length")
 
 
 buttonEl.addEventListener("click", function() {
-    let userInput = inputEl.value
-    if(NaN(userInput)){
-        lengthEl.textContent = `
-            ${userInput} meters = ${(userInput * 3.281).toFixed(3)} feet | 
-            ${userInput} feet = ${(userInput * 0.3048).toFixed(3)} meters
-        `
-        volumeEl.textContent = `
-            ${userInput} liters = ${(userInput * 0.264).toFixed(3)} gallons | 
-            ${userInput} gallons = ${(userInput * 3.78541).toFixed(3)} liters
-        `
-        mass.textContent = `
-            ${userInput} kilos = ${(userInput * 2.204).toFixed(3)} pounds | 
-            ${userInput} pounds = ${(userInput * 0.453592).toFixed(3)} kilos
-        `
-    }
+    let userInput = Number(inputEl.value)
+    lengthEl.textContent = `
+        ${userInput} meters = ${(userInput * 3.281).toFixed(3)} feet | 
+        ${userInput} feet = ${(userInput * 0.3048).toFixed(3)} meters
+    `
+    volumeEl.textContent = `
+        ${userInput} liters = ${(userInput * 0.264).toFixed(3)} gallons | 
+        ${userInput} gallons = ${(userInput * 3.78541).toFixed(3)} liters
+    `
+    mass.textContent = `
+        ${userInput} kilos = ${(userInput * 2.204).toFixed(3)} pounds | 
+        ${userInput} pounds = ${(userInput * 0.453592).toFixed(3)} kilos
+    `
     
 })
